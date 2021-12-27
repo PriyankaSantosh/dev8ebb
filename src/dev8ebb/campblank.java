@@ -14,7 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class camp
+public class campblank
 {
 static
 {
@@ -34,7 +34,7 @@ driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
 driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
 
-WebDriverWait wait=new WebDriverWait(driver,20);
+WebDriverWait wait=new WebDriverWait(driver,50);
 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='expanded dropdown first']")));
 driver.findElement(By.xpath("//li[@class='expanded dropdown first']")).click();
 driver.findElement(By.xpath("(//a[@href='/node/add/donation_record'])[1]")).click();
@@ -49,11 +49,23 @@ String  dd1=dateFormat1.format(date1);
 System.out.println(dd1);
 
 
-JavascriptExecutor jse = ((JavascriptExecutor) driver); 
-jse.executeScript("document.getElementById('edit-field-donor-registration-id-0-value').value=dd1");
+/*JavascriptExecutor jse = ((JavascriptExecutor) driver); 
+jse.executeScript("document.getElementById('edit-field-donor-registration-id-0-value').value='test'");
 
 JavascriptExecutor jse1=((JavascriptExecutor)driver);
-jse1.executeScript("document.getElementById('edit-field-donor-name-0-value').value=dd1");
+jse1.executeScript("document.getElementById('edit-field-donor-name-0-value').value='test11'");*/
+
+		
+		WebElement element = driver.findElement(By.id("edit-field-donor-registration-id-0-value"));
+		Actions action = new Actions(driver);
+		action.moveToElement(element).click().perform();
+		driver.findElement(By.id("edit-field-donor-registration-id-0-value")).sendKeys(dd1);
+
+
+		 WebElement element1 = driver.findElement(By.id("edit-field-donor-name-0-value"));
+		 Actions actions= new Actions(driver);
+		 action.moveToElement(element1).click().perform();
+			driver.findElement(By.id("edit-field-donor-name-0-value")).sendKeys(dd1);
 
 
 WebDriverWait wait1=new WebDriverWait(driver,20);
@@ -68,8 +80,8 @@ driver.findElement(By.xpath("//option[@value='Female']")).click();
 
  WebElement aa = driver.findElement(By.xpath("//div[@id='edit_field_number_of_donations_chosen']"));
 
-Actions action=new Actions(driver);
-action.moveToElement(aa).click().perform();
+Actions action11=new Actions(driver);
+action11.moveToElement(aa).click().perform();
 
 WebElement check1 = driver.findElement(By.xpath("//li[text()='First Time']"));
 JavascriptExecutor executor211 = (JavascriptExecutor)driver;
