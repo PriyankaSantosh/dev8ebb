@@ -14,7 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class NonmandatoryBloodgroup {
+public class RegIdasBagnumberFull{
 	static
 	{
 	 	String key="webdriver.chrome.driver";
@@ -36,33 +36,7 @@ public class NonmandatoryBloodgroup {
 	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
 	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
 	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
-	
-
-	WebElement checking = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-allow-partial-donor-entry']"));
-	if (checking.isSelected()) {
-		
-		
-			
-		WebElement ele21 = driver.findElement(By.id("edit-submit"));
-		JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
-		executor2111.executeScript("arguments[0].click();", ele21);
-
-
- } else {
-	 WebElement check1 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-allow-partial-donor-entry']"));
-	 JavascriptExecutor executor211 = (JavascriptExecutor)driver;
-		executor211.executeScript("arguments[0].click();", check1);
-	 
-          WebElement ele21 = driver.findElement(By.id("edit-submit"));
-			JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
-			executor2111.executeScript("arguments[0].click();", ele21);
-          
- }
-	
-	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
-	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
-	 WebElement checking2 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-blood-group-non-mandatory-in-donation-record']"));
+	WebElement checking2 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-blood-group-non-mandatory-in-donation-record']"));
 	if (checking2.isSelected()) {
 		
 		
@@ -83,14 +57,37 @@ public class NonmandatoryBloodgroup {
 			execute.executeScript("arguments[0].click();", ele3);
           
  }
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
+	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
+	
+	WebElement checking = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-allow-partial-donor-entry']"));
+	if (checking.isSelected()) {
+		
+		WebElement check1 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-allow-partial-donor-entry']"));
+		 JavascriptExecutor executor211 = (JavascriptExecutor)driver;
+			executor211.executeScript("arguments[0].click();", check1);
+		 
+			
+		WebElement ele21 = driver.findElement(By.id("edit-submit"));
+		JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
+		executor2111.executeScript("arguments[0].click();", ele21);
+
+
+ } else {
+	 
+          WebElement ele21 = driver.findElement(By.id("edit-submit"));
+			JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
+			executor2111.executeScript("arguments[0].click();", ele21);
+          
+ }
+	
+
 	WebDriverWait wait=new WebDriverWait(driver,90);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='expanded dropdown first']")));
 	driver.findElement(By.xpath("//li[@class='expanded dropdown first']")).click();
-	
 	driver.findElement(By.xpath("(//a[@href='/node/add/donation_record'])[1]")).click();
-	driver.findElement(By.xpath("//select[@id='edit-field-donor-entry-type']")).click();
-	driver.findElement(By.xpath("//option[@value='Partial']")).click();
-	
+
 	DateFormat dateFormat1 = new SimpleDateFormat("dd-MM-yyy");
 
 	//get current date time with Date()
@@ -157,14 +154,24 @@ a2.moveToElement(a1).click().perform();
 	JavascriptExecutor executor211 = (JavascriptExecutor)driver;
 		executor211.executeScript("arguments[0].click();", check1);
 
-//.findElement(By.xpath("//input[@id='edit-field-age-0-value']")).sendKeys("18");
-	//driver.findElement(By.xpath("//a[@href='#edit-group-medical-examination']")).click();
+	driver.findElement(By.xpath("//input[@id='edit-field-age-0-value']")).sendKeys("18");
+	driver.findElement(By.xpath("//a[@href='#edit-group-medical-examination']")).click();
+	
+
+
+	driver.findElement(By.xpath("//input[@id='edit-field-weight-0-value']")).sendKeys("45");
+	driver.findElement(By.xpath("//input[@id='edit-field-bp-systolic-0-value']")).sendKeys("110");
+	driver.findElement(By.xpath("//input[@id='edit-field-bp-diastolic-0-value']")).sendKeys("65");
+	driver.findElement(By.xpath("//select[@id='edit-field-hemoglobin-test']")).click();
+	driver.findElement(By.xpath("//option[@value='More than 12.5']")).click();
+
+
+
 	driver.findElement(By.xpath("//a[@href='#edit-group-blood-collection-details']")).click();
 	driver.findElement(By.xpath("//input[@id='edit-field-date-of-collection-0-value-date']")).sendKeys(dd1);
 
+	
 
-	
-	
 	driver.findElement(By.xpath("//input[@id='edit-field-date-of-collection-0-value-time']")).click();
 	driver.findElement(By.xpath("//input[@id='edit-field-date-of-collection-0-value-time']")).sendKeys(dd2);
 	driver.findElement(By.xpath("//input[@id='edit-field-bag-no-0-value']")).sendKeys("test1356");
@@ -172,12 +179,8 @@ a2.moveToElement(a1).click().perform();
 	driver.findElement(By.xpath("//input[@id='edit-field-donor-segment-number-0-value']")).sendKeys(dd1 + dd2);
 	driver.findElement(By.xpath("//select[@id='edit-field-type-of-bag']")).click();
 	driver.findElement(By.xpath("//option[text()='350 ml Double CPDA']")).click();
-	driver.findElement(By.xpath("//div[@id='edit_field_er_technician_chosen']")).click();
-	driver.findElement(By.xpath("//li[text()='PriyankaGK']")).click();
-	
-	
-	driver.findElement(By.xpath("(//button[@data-drupal-selector='edit-submit'])[3]")).click();
+	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
+	}
+}
 
-}
 	
-}
