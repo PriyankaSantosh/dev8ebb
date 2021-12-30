@@ -176,8 +176,6 @@ a2.moveToElement(a1).click().perform();
 	driver.findElement(By.xpath("//li[text()='PriyankaGK']")).click();
 	
 	
-	//driver.findElement(By.xpath("//select[@id='edit-field-type-of-bag']")).click();
-	//driver.findElement(By.xpath("//option[text()='350 ml Double CPDA']")).click();
 	driver.findElement(By.xpath("(//button[@data-drupal-selector='edit-submit'])[3]")).click();
 
 }
