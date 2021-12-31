@@ -14,7 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class NonMandatoryBloodGroupFull {
+public class DiscardDonor {
 	static
 	{
 	 	String key="webdriver.chrome.driver";
@@ -32,38 +32,7 @@ public class NonMandatoryBloodGroupFull {
 	driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
 	driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
-	driver.findElement(By.xpath("//a[@href='/user/9']")).click();
-	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
-	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
-	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
 	
-
-	
-	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
-	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
-	 WebElement checking2 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-blood-group-non-mandatory-in-donation-record']"));
-	if (checking2.isSelected()) {
-		
-		
-		
-		WebElement ele21 = driver.findElement(By.id("edit-submit"));
-		JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
-		executor2111.executeScript("arguments[0].click();", ele21);
-
-
- }
-	else {
-	 WebElement check3 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-blood-group-non-mandatory-in-donation-record']"));
-	 JavascriptExecutor exe2 = (JavascriptExecutor)driver;
-		exe2.executeScript("arguments[0].click();", check3);
-	 
-          WebElement ele3= driver.findElement(By.id("edit-submit"));
-			JavascriptExecutor execute = (JavascriptExecutor)driver;
-			execute.executeScript("arguments[0].click();", ele3);
-          
- }
-
 	WebDriverWait wait=new WebDriverWait(driver,90);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='expanded dropdown first']")));
 	driver.findElement(By.xpath("//li[@class='expanded dropdown first']")).click();
@@ -155,13 +124,34 @@ a2.moveToElement(a1).click().perform();
 
 	driver.findElement(By.xpath("//input[@id='edit-field-date-of-collection-0-value-time']")).click();
 	driver.findElement(By.xpath("//input[@id='edit-field-date-of-collection-0-value-time']")).sendKeys(dd2);
+	
+	driver.findElement(By.xpath("//input[@id='edit-field-discarded-yes']")).click();
+	driver.findElement(By.xpath("//input[@id='edit-field-date-of-discard-0-value-date']")).sendKeys(dd1);
+	driver.findElement(By.xpath("//select[@id='edit-field-reason-for-discard']")).click();
+	driver.findElement(By.xpath("//option[text()='Breakage']")).click();
+	
 	driver.findElement(By.xpath("//input[@id='edit-field-bag-no-0-value']")).sendKeys("test1356");
 	driver.findElement(By.xpath("//input[@id='edit-field-batch-no-0-value']")).sendKeys("test12365");
 	driver.findElement(By.xpath("//input[@id='edit-field-donor-segment-number-0-value']")).sendKeys(dd1 + dd2);
 	driver.findElement(By.xpath("//select[@id='edit-field-type-of-bag']")).click();
 	driver.findElement(By.xpath("//option[text()='350 ml Double CPDA']")).click();
 	driver.findElement(By.xpath("//div[@id='edit_field_er_technician_chosen']")).click();
-	driver.findElement(By.xpath("//li[text()='PriyankaGK']")).click();
+
+	WebElement aaa = driver.findElement(By.xpath("//li[text()='PriyankaGK']"));
+
+		Actions action2=new Actions(driver);
+		action2.moveToElement(aaa).click().perform();
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
-}
-}
+
+
+	 WebElement aa2 = driver.findElement(By.xpath("//button[@id='edit-submit']"));
+
+	Actions act1=new Actions(driver);
+	act1.moveToElement(aa2).click().perform();
+	 driver.findElement(By.xpath("//button[@id='edit-submit']"));
+
+	
+	
+	driver.findElement(By.xpath("//*[@id=\"block-createcontentfooterlinksblock\"]/div[2]/a")).click();
+	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
+}}
