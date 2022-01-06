@@ -32,7 +32,10 @@ public class RegIdasBagnumberFull{
 	driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
 	driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
+	
+	
 	driver.findElement(By.xpath("//a[@href='/user/9']")).click();
+
 	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
 	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
 	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();

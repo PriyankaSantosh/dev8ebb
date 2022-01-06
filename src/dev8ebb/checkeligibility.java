@@ -19,7 +19,7 @@ public class checkeligibility {
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 		}
 	WebDriver driver=new ChromeDriver();
-@Test
+
 public void CheckEligibleage() throws InterruptedException
 {
 

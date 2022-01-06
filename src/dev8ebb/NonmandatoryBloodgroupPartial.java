@@ -32,10 +32,42 @@ public class NonmandatoryBloodgroupPartial {
 	driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
 	driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
-	driver.findElement(By.xpath("//a[@href='/user/9']")).click();
-	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
-	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
-	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
+	
+	
+	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+	
+	WebElement ele21 = driver.findElement(By.xpath("//a[@href='/user/9']"));
+	JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
+	executor2111.executeScript("arguments[0].click();", ele21);
+	
+
+	
+	/*WebElement element = driver.findElement(By.xpath("//a[@href='/user/9']"));
+	Actions action = new Actions(driver);
+	action.moveToElement(element).click().perform();
+	driver.findElement(By.xpath("//a[@href='/user/9']")).click();*/
+	
+	
+	
+		driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
+		
+		
+		
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
+		
+		WebElement ele121 = driver.findElement(By.xpath("//a[@href='/node/1/edit']"));
+		JavascriptExecutor executor28 = (JavascriptExecutor)driver;
+		executor28.executeScript("arguments[0].click();", ele121);
+		
+		
+		
+		
+		WebDriverWait wait9=new WebDriverWait(driver,150);
+		wait9.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='#edit-group-miscellaneous']")));
+		driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
+	
+	
 	
 
 	WebElement checking = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-allow-partial-donor-entry']"));
@@ -43,9 +75,9 @@ public class NonmandatoryBloodgroupPartial {
 		
 		
 			
-		WebElement ele21 = driver.findElement(By.id("edit-submit"));
-		JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
-		executor2111.executeScript("arguments[0].click();", ele21);
+		WebElement y = driver.findElement(By.id("edit-submit"));
+		JavascriptExecutor ek = (JavascriptExecutor)driver;
+		ek.executeScript("arguments[0].click();", y);
 
 
  } else {
@@ -53,23 +85,27 @@ public class NonmandatoryBloodgroupPartial {
 	 JavascriptExecutor executor211 = (JavascriptExecutor)driver;
 		executor211.executeScript("arguments[0].click();", check1);
 	 
-          WebElement ele21 = driver.findElement(By.id("edit-submit"));
-			JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
-			executor2111.executeScript("arguments[0].click();", ele21);
+          WebElement abc = driver.findElement(By.id("edit-submit"));
+			JavascriptExecutor df = (JavascriptExecutor)driver;
+			df.executeScript("arguments[0].click();", abc);
           
  }
 	
 	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
+	
+	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
+
+	
 	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
 	 WebElement checking2 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-blood-group-non-mandatory-in-donation-record']"));
 	if (checking2.isSelected()) {
 		
 		
 		
-		WebElement ele21 = driver.findElement(By.id("edit-submit"));
-		JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
-		executor2111.executeScript("arguments[0].click();", ele21);
+		WebElement xy = driver.findElement(By.id("edit-submit"));
+		JavascriptExecutor op = (JavascriptExecutor)driver;
+		op.executeScript("arguments[0].click();", xy);
 
 
  }
@@ -117,14 +153,14 @@ public class NonmandatoryBloodgroupPartial {
 	jse1.executeScript("document.getElementById('edit-field-donor-name-0-value').value='test11'");*/
 
 			
-			WebElement element = driver.findElement(By.id("edit-field-donor-registration-id-0-value"));
-			Actions action = new Actions(driver);
-			action.moveToElement(element).click().perform();
+			WebElement element4 = driver.findElement(By.id("edit-field-donor-registration-id-0-value"));
+			Actions action4 = new Actions(driver);
+			action4.moveToElement(element4).click().perform();
 			driver.findElement(By.id("edit-field-donor-registration-id-0-value")).sendKeys(dd1 + dd2);
 
 
 			 WebElement element1 = driver.findElement(By.id("edit-field-donor-name-0-value"));
-			 Actions actions= new Actions(driver);
+			 Actions action= new Actions(driver);
 			 action.moveToElement(element1).click().perform();
 				driver.findElement(By.id("edit-field-donor-name-0-value")).sendKeys(dd1 + dd2);
 				

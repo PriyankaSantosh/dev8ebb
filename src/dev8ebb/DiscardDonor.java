@@ -33,7 +33,7 @@ public class DiscardDonor {
 	driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
 	
-	WebDriverWait wait=new WebDriverWait(driver,90);
+	WebDriverWait wait=new WebDriverWait(driver,50);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='expanded dropdown first']")));
 	driver.findElement(By.xpath("//li[@class='expanded dropdown first']")).click();
 	driver.findElement(By.xpath("(//a[@href='/node/add/donation_record'])[1]")).click();
@@ -142,16 +142,8 @@ a2.moveToElement(a1).click().perform();
 		Actions action2=new Actions(driver);
 		action2.moveToElement(aaa).click().perform();
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
-
-
-	 WebElement aa2 = driver.findElement(By.xpath("//button[@id='edit-submit']"));
-
-	Actions act1=new Actions(driver);
-	act1.moveToElement(aa2).click().perform();
-	 driver.findElement(By.xpath("//button[@id='edit-submit']"));
-
-	
 	
 	driver.findElement(By.xpath("//*[@id=\"block-createcontentfooterlinksblock\"]/div[2]/a")).click();
+
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
 }}

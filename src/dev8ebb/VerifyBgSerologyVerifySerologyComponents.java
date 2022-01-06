@@ -14,7 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class NonMandatoryBloodGroupFull {
+public class VerifyBgSerologyVerifySerologyComponents {
 	static
 	{
 	 	String key="webdriver.chrome.driver";
@@ -32,16 +32,29 @@ public class NonMandatoryBloodGroupFull {
 	driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
 	driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
+
+	
 	driver.findElement(By.xpath("//a[@href='/user/9']")).click();
+	
 	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
 	
-	WebElement element = driver.findElement(By.xpath("//a[@href='/node/1/edit']"));
-	Actions action = new Actions(driver);
-	action.moveToElement(element).click().perform();
-	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
 	
-	WebDriverWait wait1=new WebDriverWait(driver,150);
-	wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='#edit-group-miscellaneous']")));
+	WebElement ele21 = driver.findElement(By.xpath("//a[@href='/node/1/edit']"));
+	JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
+	executor2111.executeScript("arguments[0].click();", ele21);
+	
+	
+	
+	/*WebDriverWait wait=new WebDriverWait(driver,150);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/node/1/edit']")));
+	
+	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
+*/
+	
+	WebDriverWait wait9=new WebDriverWait(driver,90);
+	wait9.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='#edit-group-miscellaneous']")));
 	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
 	
 
@@ -54,9 +67,9 @@ public class NonMandatoryBloodGroupFull {
 		
 		
 		
-		WebElement ele21 = driver.findElement(By.id("edit-submit"));
-		JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
-		executor2111.executeScript("arguments[0].click();", ele21);
+		WebElement ele213 = driver.findElement(By.id("edit-submit"));
+		JavascriptExecutor executor21115 = (JavascriptExecutor)driver;
+		executor21115.executeScript("arguments[0].click();", ele213);
 
 
  }
@@ -70,9 +83,67 @@ public class NonMandatoryBloodGroupFull {
 			execute.executeScript("arguments[0].click();", ele3);
           
  }
+	
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
-	WebDriverWait wait=new WebDriverWait(driver,90);
-	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='expanded dropdown first']")));
+	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
+	
+	 WebElement checking3 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-mandatory-blood-group-verification']"));
+	if (checking3.isSelected()) {
+		
+		
+		
+		WebElement ele219 = driver.findElement(By.id("edit-submit"));
+		JavascriptExecutor executor21119 = (JavascriptExecutor)driver;
+		executor21119.executeScript("arguments[0].click();", ele219);
+
+
+ }
+	else {
+	 WebElement check3 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-mandatory-blood-group-verification']"));
+	 JavascriptExecutor exe2 = (JavascriptExecutor)driver;
+		exe2.executeScript("arguments[0].click();", check3);
+	 
+          WebElement ele3= driver.findElement(By.id("edit-submit"));
+			JavascriptExecutor execute = (JavascriptExecutor)driver;
+			execute.executeScript("arguments[0].click();", ele3);
+          
+ }
+	
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
+	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
+	
+	 WebElement checking4 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-mandatory-serology-verification']"));
+	if (checking4.isSelected()) {
+		
+		
+		
+		WebElement ele219 = driver.findElement(By.id("edit-submit"));
+		JavascriptExecutor executor21119 = (JavascriptExecutor)driver;
+		executor21119.executeScript("arguments[0].click();", ele219);
+
+
+ }
+	else {
+	 WebElement check3 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-mandatory-serology-verification']"));
+	 JavascriptExecutor exe2 = (JavascriptExecutor)driver;
+		exe2.executeScript("arguments[0].click();", check3);
+	 
+          WebElement ele3= driver.findElement(By.id("edit-submit"));
+			JavascriptExecutor execute = (JavascriptExecutor)driver;
+			execute.executeScript("arguments[0].click();", ele3);
+          
+ }
+	
+		
+	
+	WebDriverWait wait88=new WebDriverWait(driver,90);
+	wait88.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='expanded dropdown first']")));
 	driver.findElement(By.xpath("//li[@class='expanded dropdown first']")).click();
 	driver.findElement(By.xpath("(//a[@href='/node/add/donation_record'])[1]")).click();
 
@@ -116,11 +187,11 @@ public class NonMandatoryBloodGroupFull {
 				
 
 
-	/*WebDriverWait wait2=new WebDriverWait(driver,90);
+	WebDriverWait wait2=new WebDriverWait(driver,90);
 	wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='edit_field_blood_group_chosen']")));
 	driver.findElement(By.xpath("//div[@id='edit_field_blood_group_chosen']")).click();
 	driver.findElement(By.xpath("//li[text()='A1 Neg']")).click();
-*/
+
 
 	driver.findElement(By.xpath("//select[@id='edit-field-gender']")).click();
 	driver.findElement(By.xpath("//option[@value='Female']")).click();
@@ -170,5 +241,64 @@ a2.moveToElement(a1).click().perform();
 	driver.findElement(By.xpath("//div[@id='edit_field_er_technician_chosen']")).click();
 	driver.findElement(By.xpath("//li[text()='PriyankaGK']")).click();
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
-}
-}
+	
+	//driver.findElement(By.xpath("//*[@id=\"block-createcontentfooterlinksblock\"]/div[2]/a")).click();
+
+	//driver.findElement(By.xpath("//button[@id='edit-submit']")).click();   //create components 
+
+	driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
+	
+	WebElement qq = driver.findElement(By.xpath("//a[text()='Verify Blood Group']"));
+	JavascriptExecutor tt = (JavascriptExecutor)driver;
+	tt.executeScript("arguments[0].click();", qq);                                  //verify Blood group
+	
+	
+	
+	
+
+	try {
+		WebElement elem12 = driver.findElement(By.xpath("//a[text()=' Add New Serology Tests']"));
+		JavascriptExecutor exec211 = (JavascriptExecutor)driver;
+		exec211.executeScript("arguments[0].click();", elem12);
+
+	}
+	catch(org.openqa.selenium.StaleElementReferenceException ex)
+	{
+	            WebElement ele23 = driver.findElement(By.xpath("//a[text()=' Add New Serology Tests']"));
+	        	JavascriptExecutor executor23 = (JavascriptExecutor)driver;
+	        	executor23.executeScript("arguments[0].click();", ele23);
+	}
+	
+	driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
+
+
+	driver.findElement(By.xpath("//div[@id='edit_field_tests_technician_chosen']")).click();
+	driver.findElement(By.xpath("//li[text()='PriyankaGK']")).click();
+
+
+	WebElement ele11111 = driver.findElement(By.id("edit-submit"));
+	JavascriptExecutor executor11111 = (JavascriptExecutor)driver;
+	executor11111.executeScript("arguments[0].click();", ele11111);
+	
+	/*driver.findElement(By.xpath("//div[@class='field-item even']/a")).click();
+	*/
+	driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
+
+	
+	WebElement app = driver.findElement(By.xpath("//a[text()='Verify Serology']"));
+	JavascriptExecutor ee = (JavascriptExecutor)driver;
+	ee.executeScript("arguments[0].click();", app);
+	
+	
+	
+	
+	driver.findElement(By.xpath("/html/body/div[1]/div/div/section/div[2]/article/div[2]/div[1]/div[2]/a")).click();
+	
+	
+	
+	
+	driver.findElement(By.xpath("//*[@id=\"block-createcontentfooterlinksblock\"]/div[2]/a")).click();
+
+		driver.findElement(By.xpath("//button[@id='edit-submit']")).click();   //create components 
+
+}}

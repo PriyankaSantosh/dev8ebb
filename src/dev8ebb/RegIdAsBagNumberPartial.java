@@ -34,8 +34,9 @@ public class RegIdAsBagNumberPartial {
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
 	driver.findElement(By.xpath("//a[@href='/user/9']")).click();
 	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
+	
 	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
-	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
 	
 

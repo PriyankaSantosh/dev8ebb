@@ -48,18 +48,21 @@ Date date1 = new Date();
 String  dd1=dateFormat1.format(date1);
 System.out.println(dd1);
 
+DateFormat dateFormat2 = new SimpleDateFormat("HH-mm");
 
-/*JavascriptExecutor jse = ((JavascriptExecutor) driver); 
-jse.executeScript("document.getElementById('edit-field-donor-registration-id-0-value').value='test'");
+//get current date time with Date()
 
-JavascriptExecutor jse1=((JavascriptExecutor)driver);
-jse1.executeScript("document.getElementById('edit-field-donor-name-0-value').value='test11'");*/
+Date date2 = new Date();
+
+String  dd2=dateFormat2.format(date2);
+System.out.println(dd2);
+
 
 		
 		WebElement element = driver.findElement(By.id("edit-field-donor-registration-id-0-value"));
 		Actions action = new Actions(driver);
 		action.moveToElement(element).click().perform();
-		driver.findElement(By.id("edit-field-donor-registration-id-0-value")).sendKeys(dd1);
+		driver.findElement(By.id("edit-field-donor-registration-id-0-value")).sendKeys(dd1 + dd2);
 
 
 		 WebElement element1 = driver.findElement(By.id("edit-field-donor-name-0-value"));
@@ -99,14 +102,7 @@ driver.findElement(By.xpath("//input[@id='edit-field-bp-diastolic-0-value']")).s
 driver.findElement(By.xpath("//a[@href='#edit-group-blood-collection-details']")).click();
 driver.findElement(By.xpath("//input[@id='edit-field-date-of-collection-0-value-date']")).sendKeys(dd1);
 
-DateFormat dateFormat2 = new SimpleDateFormat("HH-mm");
 
-//get current date time with Date()
-
-Date date2 = new Date();
-
-String  dd2=dateFormat2.format(date2);
-System.out.println(dd2);
 
 driver.findElement(By.xpath("//input[@id='edit-field-date-of-collection-0-value-time']")).click();
 driver.findElement(By.xpath("//input[@id='edit-field-date-of-collection-0-value-time']")).sendKeys(dd2);
@@ -116,6 +112,7 @@ driver.findElement(By.xpath("//input[@id='edit-field-donor-segment-number-0-valu
 driver.findElement(By.xpath("//select[@id='edit-field-type-of-bag']")).click();
 driver.findElement(By.xpath("//option[text()='350 ml Double CPDA']")).click();
 driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
+System.out.println("Please enter the name of the blood camp ");
 
 
 

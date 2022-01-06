@@ -57,12 +57,6 @@ public class BP {
 	System.out.println(dd2);
 
 
-	/*JavascriptExecutor jse = ((JavascriptExecutor) driver); 
-	jse.executeScript("document.getElementById('edit-field-donor-registration-id-0-value').value='test'");
-
-	JavascriptExecutor jse1=((JavascriptExecutor)driver);
-	jse1.executeScript("document.getElementById('edit-field-donor-name-0-value').value='test11'");*/
-
 			
 			WebElement element = driver.findElement(By.id("edit-field-donor-registration-id-0-value"));
 			Actions action = new Actions(driver);
@@ -72,7 +66,7 @@ public class BP {
 
 			 WebElement element1 = driver.findElement(By.id("edit-field-donor-name-0-value"));
 			 Actions actions= new Actions(driver);
-			 action.moveToElement(element1).click().perform();
+			 actions.moveToElement(element1).click().perform();
 				driver.findElement(By.id("edit-field-donor-name-0-value")).sendKeys(dd1 + dd2);
 				
 				
@@ -128,6 +122,9 @@ a2.moveToElement(a1).click().perform();
 	driver.findElement(By.xpath("//select[@id='edit-field-type-of-bag']")).click();
 	driver.findElement(By.xpath("//option[text()='350 ml Double CPDA']")).click();
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
+	
+	WebDriverWait wa=new WebDriverWait(driver,150);
+	wa.until(ExpectedConditions.elementToBeClickable(By.xpath("(//li/a[text()='Edit'])[1]")));	
 	driver.findElement(By.xpath("(//li/a[text()='Edit'])[1]")).click();
 	driver.findElement(By.xpath("//a[@href='#edit-group-medical-examination']")).click();
 	WebElement e= 	driver.findElement(By.xpath("//input[@id='edit-field-bp-systolic-0-value']"));
