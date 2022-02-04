@@ -38,7 +38,7 @@ public class SerologyWithoutTechnician {
 	
 	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
 	
-	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
 	
 	WebElement ele21 = driver.findElement(By.xpath("//a[@href='/node/1/edit']"));
@@ -114,33 +114,6 @@ public class SerologyWithoutTechnician {
           
  }
 	
-	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
-	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-
-	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
-	
-	 WebElement checking4 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-mandatory-serology-verification']"));
-	if (checking4.isSelected()) {
-		
-		
-		
-		WebElement ele219 = driver.findElement(By.id("edit-submit"));
-		JavascriptExecutor executor21119 = (JavascriptExecutor)driver;
-		executor21119.executeScript("arguments[0].click();", ele219);
-
-
- }
-	else {
-	 WebElement check3 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-mandatory-serology-verification']"));
-	 JavascriptExecutor exe2 = (JavascriptExecutor)driver;
-		exe2.executeScript("arguments[0].click();", check3);
-	 
-          WebElement ele3= driver.findElement(By.id("edit-submit"));
-			JavascriptExecutor execute = (JavascriptExecutor)driver;
-			execute.executeScript("arguments[0].click();", ele3);
-          
- }
 	
 		
 	
@@ -284,17 +257,10 @@ a2.moveToElement(a1).click().perform();
 	
 	/*driver.findElement(By.xpath("//div[@class='field-item even']/a")).click();
 	*/
-	driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
-
-	
-	WebElement app = driver.findElement(By.xpath("//a[text()='Verify Serology']"));
-	JavascriptExecutor ee = (JavascriptExecutor)driver;
-	ee.executeScript("arguments[0].click();", app);
 	
 	
 	
 	
-	driver.findElement(By.xpath("/html/body/div[1]/div/div/section/div[2]/article/div[2]/div[1]/div[2]/a")).click();
 	System.out.println("please enter the name of the technician");
 	
 	

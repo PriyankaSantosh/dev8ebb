@@ -14,7 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SerologyVerifySeroCompoVerifyBg {
+public class crossmatch {
 	static
 	{
 	 	String key="webdriver.chrome.driver";
@@ -32,18 +32,67 @@ public class SerologyVerifySeroCompoVerifyBg {
 	driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
 	driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
+	
+	
+	WebDriverWait wait=new WebDriverWait(driver,90);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//li[@class='expanded dropdown'])[3]")));
+	driver.findElement(By.xpath("(//li[@class='expanded dropdown'])[3]")).click();
+	driver.findElement(By.xpath("//a[@href='/create-patient-blood-requirement']")).click();
+	
+	DateFormat dateFormat1 = new SimpleDateFormat("dd-MM-yyy");
+
+	//get current date time with Date()
+
+	Date date1 = new Date();
+
+	String  dd1=dateFormat1.format(date1);
+	System.out.println(dd1);
+	
+	DateFormat dateFormat2 = new SimpleDateFormat("HH-mm");
+
+	//get current date time with Date()
+
+	Date date2 = new Date();
+
+	String  dd2=dateFormat2.format(date2);
+	System.out.println(dd2);
+	
+	
+	WebElement element = driver.findElement(By.xpath("//input[@id='edit-field-patient-name-0-value']"));
+	Actions action = new Actions(driver);
+	action.moveToElement(element).click().perform();
+	driver.findElement(By.xpath("//input[@id='edit-field-patient-name-0-value']")).sendKeys(dd1 + dd2);
+	
+	
+	WebElement element1 = driver.findElement(By.xpath("//input[@id='edit-field-patient-id-0-value']"));
+	Actions action1 = new Actions(driver);
+	action1.moveToElement(element1).click().perform();
+	driver.findElement(By.xpath("//input[@id='edit-field-patient-id-0-value']")).sendKeys(dd1 + dd2);
+	driver.findElement(By.xpath("//input[@id='edit-field-hospital-id-0-target-id']")).sendKeys("tes");
+	driver.findElement(By.xpath("//ul[@id='ui-id-1']")).click();
+	driver.findElement(By.xpath("//button[@value='Save']")).click();
+	
+	driver.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 
 	
-	driver.findElement(By.xpath("//a[@href='/user/9']")).click();
+driver.findElement(By.xpath("//a[@href='/user/9']")).click();
+driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+
+
+	WebElement ele5 = driver.findElement(By.xpath("(//a[text()='First Centre'])[1]"));
+	Actions action5=new Actions(driver);
+	action5.moveToElement(ele5).click().perform();
 	
-	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
 	
-	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
 	
 	WebElement ele21 = driver.findElement(By.xpath("//a[@href='/node/1/edit']"));
 	JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
 	executor2111.executeScript("arguments[0].click();", ele21);
+
+	
+	
 	
 	
 	
@@ -147,22 +196,22 @@ public class SerologyVerifySeroCompoVerifyBg {
 	driver.findElement(By.xpath("//li[@class='expanded dropdown first']")).click();
 	driver.findElement(By.xpath("(//a[@href='/node/add/donation_record'])[1]")).click();
 
-	DateFormat dateFormat1 = new SimpleDateFormat("dd-MM-yyy");
+	DateFormat dateFormat12 = new SimpleDateFormat("dd-MM-yyy");
 
 	//get current date time with Date()
 
-	Date date1 = new Date();
+	Date date12 = new Date();
 
-	String  apple=dateFormat1.format(date1);
+	String  apple=dateFormat12.format(date12);
 	System.out.println(apple);
 	
-	DateFormat dateFormat2 = new SimpleDateFormat("HH-mm");
+	DateFormat dateFormat21 = new SimpleDateFormat("HH-mm");
 
 	//get current date time with Date()
 
-	Date date2 = new Date();
+	Date date22 = new Date();
 
-	String  bat=dateFormat2.format(date2);
+	String  bat=dateFormat21.format(date22);
 	System.out.println(bat);
 
 
@@ -173,15 +222,15 @@ public class SerologyVerifySeroCompoVerifyBg {
 	jse1.executeScript("document.getElementById('edit-field-donor-name-0-value').value='test11'");*/
 
 			
-			WebElement element1 = driver.findElement(By.id("edit-field-donor-registration-id-0-value"));
-			Actions action1 = new Actions(driver);
-			action1.moveToElement(element1).click().perform();
+			WebElement element11 = driver.findElement(By.id("edit-field-donor-registration-id-0-value"));
+			Actions action11 = new Actions(driver);
+			action11.moveToElement(element11).click().perform();
 			driver.findElement(By.id("edit-field-donor-registration-id-0-value")).sendKeys(apple + bat);
 
 
-			 WebElement element2 = driver.findElement(By.id("edit-field-donor-name-0-value"));
-			 Actions action2= new Actions(driver);
-			 action2.moveToElement(element2).click().perform();
+			 WebElement element27 = driver.findElement(By.id("edit-field-donor-name-0-value"));
+			 Actions action27= new Actions(driver);
+			 action27.moveToElement(element27).click().perform();
 				driver.findElement(By.id("edit-field-donor-name-0-value")).sendKeys(apple + bat);
 				
 				
@@ -206,8 +255,8 @@ a2.moveToElement(a1).click().perform();
 
 	 WebElement aa = driver.findElement(By.xpath("//div[@id='edit_field_number_of_donations_chosen']"));
 
-	Actions action11=new Actions(driver);
-	action11.moveToElement(aa).click().perform();
+	Actions action112=new Actions(driver);
+	action112.moveToElement(aa).click().perform();
 
 	WebElement check1 = driver.findElement(By.xpath("//li[text()='First Time']"));
 	JavascriptExecutor executor211 = (JavascriptExecutor)driver;
@@ -290,8 +339,6 @@ a2.moveToElement(a1).click().perform();
 	ee.executeScript("arguments[0].click();", app);
 	
 	
-	
-	
 	driver.findElement(By.xpath("/html/body/div[1]/div/div/section/div[2]/article/div[2]/div[1]/div[2]/a")).click();
 	
 	
@@ -299,14 +346,19 @@ a2.moveToElement(a1).click().perform();
 
 		driver.findElement(By.xpath("//button[@id='edit-submit']")).click();   //create components 
 
-		
-	
-	
 	
 driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
 	
 	WebElement qq = driver.findElement(By.xpath("//a[text()='Verify Blood Group']"));
 	JavascriptExecutor tt = (JavascriptExecutor)driver;
-	tt.executeScript("arguments[0].click();", qq);                                  //verify Blood group
+	tt.executeScript("arguments[0].click();", qq);  //verify Blood group
+	
+	driver.findElement(By.xpath("(//a[text()='view'])[1]")).click();
+	driver.findElement(By.xpath("(//a[contains(@href,'edit')])[1]")).click();
+	driver.findElement(By.xpath("//input[@id='edit-field-quantity-0-value']")).sendKeys("500");
+	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();  
+
 	}
-}
+	}
+	
+

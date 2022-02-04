@@ -1,8 +1,10 @@
 package dev8ebb;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -18,7 +20,7 @@ public class ScreenShot {
 	    System.setProperty(key, value);
 	}
 	 
-	 public static void main(String[] args) throws InterruptedException
+	 public static void main(String[] args) throws InterruptedException, IOException
 	 {
 		 WebDriver driver=new ChromeDriver();
 		 driver.get("https://dev.ebloodbanking.com/");
@@ -28,11 +30,15 @@ public class ScreenShot {
 			driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
 			driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 			driver.findElement(By.id("edit-submit")).click();
-			driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 
 		 TakesScreenshot t=  (TakesScreenshot) driver;
 		 File scrFile =t.getScreenshotAs(OutputType.FILE);
-		 String path="./photo/"+".png";
+		 String path="./photo/Screenshot(2).png";
+		 File desFile= new File(path);
+		 FileUtils.copyFile(scrFile, desFile);
+		 driver.close();
+		 
+	
 	 }
 
 }
