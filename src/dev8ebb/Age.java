@@ -46,9 +46,9 @@ public class Age {
 
 		//get current date time with Date()
 
-		Date date1 = new Date();
+		Date date11 = new Date();
 
-		String  dd1=dateFormat1.format(date1);
+		String  dd1=dateFormat1.format(date11);
 		System.out.println(dd1);
 		
 		DateFormat dateFormat2 = new SimpleDateFormat("HH-mm");
