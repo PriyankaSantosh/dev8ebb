@@ -25,7 +25,7 @@ public class VerifyBgComponentsSerology {
 
 	WebDriver driver=new ChromeDriver();
 	@Test
-	public void testing() throws InterruptedException 
+	public void VerifyBgComponentsSerology() throws InterruptedException 
 	{
 	
 	//public static void main(String[] args) throws InterruptedException

@@ -26,7 +26,7 @@ public class ClosePatientRequestWithoutCrossmatch {
 	
 	WebDriver driver=new ChromeDriver();
 	@Test
-	public void campblank() throws InterruptedException 
+	public void ClosePatientRequestWithoutCrossmatch() throws InterruptedException 
 	{
 	//public static void main(String[] args) throws InterruptedException
 	//{

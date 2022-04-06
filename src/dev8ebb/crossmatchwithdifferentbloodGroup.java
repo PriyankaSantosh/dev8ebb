@@ -26,7 +26,7 @@ public class crossmatchwithdifferentbloodGroup {
 
 	WebDriver driver=new ChromeDriver();
 	@Test
-	public void crossmatch() throws InterruptedException 
+	public void crossmatchwithdifferentbloodGroup() throws InterruptedException 
 	{
 	
 	

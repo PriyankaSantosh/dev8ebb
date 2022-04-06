@@ -22,7 +22,7 @@ public class checkeligibility {
 	
 	WebDriver driver=new ChromeDriver();
 	@Test
-	public void campblank() throws InterruptedException 
+	public void checkeligibility() throws InterruptedException 
 	{
 
 	
