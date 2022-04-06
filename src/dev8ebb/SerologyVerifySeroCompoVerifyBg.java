@@ -291,7 +291,6 @@ a2.moveToElement(a1).click().perform();
 	
 	
 	
-	
 	driver.findElement(By.xpath("/html/body/div[1]/div/div/section/div[2]/article/div[2]/div[1]/div[2]/a")).click();
 	
 	

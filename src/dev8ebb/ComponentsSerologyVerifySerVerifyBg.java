@@ -22,7 +22,6 @@ public class ComponentsSerologyVerifySerVerifyBg {
 		System.setProperty(key, value);
 		}
 
-
 	public static void main(String[] args) throws InterruptedException
 	{
 	WebDriver driver=new ChromeDriver();
@@ -45,7 +44,7 @@ public class ComponentsSerologyVerifySerVerifyBg {
 	JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
 	executor2111.executeScript("arguments[0].click();", ele21);
 	
-	
+
 	
 	/*WebDriverWait wait=new WebDriverWait(driver,150);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/node/1/edit']")));
@@ -280,8 +279,6 @@ a2.moveToElement(a1).click().perform();
 	JavascriptExecutor executor11111 = (JavascriptExecutor)driver;
 	executor11111.executeScript("arguments[0].click();", ele11111);
 	
-	/*driver.findElement(By.xpath("//div[@class='field-item even']/a")).click();
-	*/
 	driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
 
 	
@@ -300,7 +297,6 @@ driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
 	
 	WebElement qq = driver.findElement(By.xpath("//a[text()='Verify Blood Group']"));
 	JavascriptExecutor tt = (JavascriptExecutor)driver;
-	tt.executeScript("arguments[0].click();", qq);                                  //verify Blood group
-	
+	tt.executeScript("arguments[0].click();", qq);                                  
 	
 }}

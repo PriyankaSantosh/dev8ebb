@@ -59,12 +59,6 @@ public class FutherDateOfCollection {
 	System.out.println(dd2);
 
 
-	/*JavascriptExecutor jse = ((JavascriptExecutor) driver); 
-	jse.executeScript("document.getElementById('edit-field-donor-registration-id-0-value').value='test'");
-
-	JavascriptExecutor jse1=((JavascriptExecutor)driver);
-	jse1.executeScript("document.getElementById('edit-field-donor-name-0-value').value='test11'");*/
-
 			
 			WebElement element = driver.findElement(By.id("edit-field-donor-registration-id-0-value"));
 			Actions action = new Actions(driver);

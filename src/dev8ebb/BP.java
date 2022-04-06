@@ -22,7 +22,6 @@ public class BP {
 		System.setProperty(key, value);
 		}
 
-
 	public static void main(String[] args) throws InterruptedException
 	{
 	WebDriver driver=new ChromeDriver();
@@ -42,9 +41,9 @@ public class BP {
 
 	//get current date time with Date()
 
-	Date date1 = new Date();
+	Date date18 = new Date();
 
-	String  dd1=dateFormat1.format(date1);
+	String  dd1=dateFormat1.format(date18);
 	System.out.println(dd1);
 	
 	DateFormat dateFormat2 = new SimpleDateFormat("HH-mm");

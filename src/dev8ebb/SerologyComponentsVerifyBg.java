@@ -256,7 +256,7 @@ a2.moveToElement(a1).click().perform();
 	
 	
 	
-	
+
 
 	try {
 		WebElement elem12 = driver.findElement(By.xpath("//a[text()=' Add New Serology Tests']"));
@@ -294,6 +294,6 @@ a2.moveToElement(a1).click().perform();
 	JavascriptExecutor tt = (JavascriptExecutor)driver;
 	tt.executeScript("arguments[0].click();", qq);                               //verify Blood group
 	
-	
+
 	
 }}

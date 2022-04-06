@@ -67,7 +67,6 @@ public class VerifyBloodGroup {
 		JavascriptExecutor executor21115 = (JavascriptExecutor)driver;
 		executor21115.executeScript("arguments[0].click();", ele213);
 
-
  }
 	else {
 	 WebElement check3 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-blood-group-non-mandatory-in-donation-record']"));

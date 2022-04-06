@@ -138,7 +138,6 @@ public class NonmandatoryBloodgroupPartial {
 	
 	DateFormat dateFormat2 = new SimpleDateFormat("HH-mm");
 
-	//get current date time with Date()
 
 	Date date2 = new Date();
 
@@ -152,7 +151,7 @@ public class NonmandatoryBloodgroupPartial {
 	JavascriptExecutor jse1=((JavascriptExecutor)driver);
 	jse1.executeScript("document.getElementById('edit-field-donor-name-0-value').value='test11'");*/
 
-			
+		
 			WebElement element4 = driver.findElement(By.id("edit-field-donor-registration-id-0-value"));
 			Actions action4 = new Actions(driver);
 			action4.moveToElement(element4).click().perform();

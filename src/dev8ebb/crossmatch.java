@@ -21,8 +21,6 @@ public class crossmatch {
 		String value="./driver/chromedriver.exe";
 		System.setProperty(key, value);
 		}
-
-
 	public static void main(String[] args) throws InterruptedException
 	{
 	WebDriver driver=new ChromeDriver();
@@ -70,13 +68,20 @@ public class crossmatch {
 	driver.findElement(By.xpath("//input[@id='edit-field-patient-id-0-value']")).sendKeys(dd1 + dd2);
 	driver.findElement(By.xpath("//input[@id='edit-field-hospital-id-0-target-id']")).sendKeys("tes");
 	driver.findElement(By.xpath("//ul[@id='ui-id-1']")).click();
+	driver.findElement(By.xpath("//div[@id='edit_field_abo_chosen']")).click();
+	driver.findElement(By.xpath("//li[text()='A1']")).click();
+	driver.findElement(By.xpath("//select[@id='edit-field-rh']")).click();
+	driver.findElement(By.xpath("//option[@value='Neg']")).click();
+	
+
 	driver.findElement(By.xpath("//button[@value='Save']")).click();
 	
 	driver.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
 
-	
+	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+
 driver.findElement(By.xpath("//a[@href='/user/9']")).click();
-driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+driver.findElement(By.xpath("//a[@href='/user/9']")).click();
 
 
 	WebElement ele5 = driver.findElement(By.xpath("(//a[text()='First Centre'])[1]"));
@@ -357,6 +362,14 @@ driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
 	driver.findElement(By.xpath("(//a[contains(@href,'edit')])[1]")).click();
 	driver.findElement(By.xpath("//input[@id='edit-field-quantity-0-value']")).sendKeys("500");
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();  
+	driver.findElement(By.xpath("//a[text()='Create Crossmatch Report']")).click();
+	driver.findElement(By.xpath("//div[@id='edit_field_crossmatch_patient_chosen']")).click();
+	driver.findElement(By.xpath("(//input[@class='chosen-search-input'])[1]")).sendKeys(dd1 + dd2);
+	driver.findElement(By.xpath("//li[@data-option-array-index='1']")).click();
+	driver.findElement(By.xpath("//div[@id='edit_field_compatibility_chosen']")).click();
+	driver.findElement(By.xpath("//li[text()='Yes']")).click();
+	
+driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
 
 	}
 	}

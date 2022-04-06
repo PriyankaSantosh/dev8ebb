@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import org.omg.CORBA.TIMEOUT;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Patient {
+public class ClosePatientRequestWithoutCrossmatch {
 	static
 	{
 	 	String key="webdriver.chrome.driver";
@@ -49,7 +50,6 @@ public class Patient {
 	DateFormat dateFormat2 = new SimpleDateFormat("HH-mm");
 
 	//get current date time with Date()
-
 	Date date2 = new Date();
 
 	String  dd2=dateFormat2.format(date2);
@@ -66,15 +66,17 @@ public class Patient {
 	Actions action1 = new Actions(driver);
 	action1.moveToElement(element1).click().perform();
 	driver.findElement(By.xpath("//input[@id='edit-field-patient-id-0-value']")).sendKeys(dd1 + dd2);
+	
 	driver.findElement(By.xpath("//input[@id='edit-field-hospital-id-0-target-id']")).sendKeys("tes");
 	driver.findElement(By.xpath("//ul[@id='ui-id-1']")).click();
 	
-
-	
-	
 	driver.findElement(By.xpath("//button[@value='Save']")).click();
-	//System.out.println();
-	//System.out.println(" please enter patient request id"  +  "please enter patient name"  +  "please enter the name of the hospital");
+	driver.findElement(By.xpath("//a[@title='Click to Close Patient Request']")).click();
+
+	//driver.findElement(By.xpath("//a[@title='Click to Close Patient Request']")).click();
+	driver.findElement(By.xpath("(//button[@data-drupal-selector='edit-submit'])[2]")).click();
+	System.out.println("Setting the request status as dropped as not components were issued to the patient");
+
 }
 }
 

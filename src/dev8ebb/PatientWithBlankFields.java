@@ -13,7 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Patient {
+public class PatientWithBlankFields {
 	static
 	{
 	 	String key="webdriver.chrome.driver";
@@ -56,25 +56,26 @@ public class Patient {
 	System.out.println(dd2);
 	
 	
-	WebElement element = driver.findElement(By.xpath("//input[@id='edit-field-patient-name-0-value']"));
+	/*WebElement element = driver.findElement(By.xpath("//input[@id='edit-field-patient-name-0-value']"));
 	Actions action = new Actions(driver);
 	action.moveToElement(element).click().perform();
-	driver.findElement(By.xpath("//input[@id='edit-field-patient-name-0-value']")).sendKeys(dd1 + dd2);
+	driver.findElement(By.xpath("//input[@id='edit-field-patient-name-0-value']")).sendKeys(dd1 + dd2);*/
 	
 	
-	WebElement element1 = driver.findElement(By.xpath("//input[@id='edit-field-patient-id-0-value']"));
-	Actions action1 = new Actions(driver);
-	action1.moveToElement(element1).click().perform();
-	driver.findElement(By.xpath("//input[@id='edit-field-patient-id-0-value']")).sendKeys(dd1 + dd2);
-	driver.findElement(By.xpath("//input[@id='edit-field-hospital-id-0-target-id']")).sendKeys("tes");
-	driver.findElement(By.xpath("//ul[@id='ui-id-1']")).click();
+	//WebElement element1 = driver.findElement(By.xpath("//input[@id='edit-field-patient-id-0-value']"));
+	//Actions action1 = new Actions(driver);
+	//action1.moveToElement(element1).click().perform();
+	//driver.findElement(By.xpath("//input[@id='edit-field-patient-id-0-value']")).sendKeys(dd1 + dd2);
+	//driver.findElement(By.xpath("//input[@id='edit-field-hospital-id-0-target-id']")).sendKeys("tes");
+	//driver.findElement(By.xpath("//ul[@id='ui-id-1']")).click();
 	
 
 	
 	
 	driver.findElement(By.xpath("//button[@value='Save']")).click();
-	//System.out.println();
-	//System.out.println(" please enter patient request id"  +  "please enter patient name"  +  "please enter the name of the hospital");
+	System.out.println(" please enter patient request id"  +  "please enter patient name"  +  "please enter the name of the hospital");
 }
 }
+
+
 

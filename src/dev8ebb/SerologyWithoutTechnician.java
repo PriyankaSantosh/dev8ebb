@@ -22,7 +22,6 @@ public class SerologyWithoutTechnician {
 		System.setProperty(key, value);
 		}
 
-
 	public static void main(String[] args) throws InterruptedException
 	{
 	WebDriver driver=new ChromeDriver();
@@ -39,7 +38,6 @@ public class SerologyWithoutTechnician {
 	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
 	
 	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-
 	
 	WebElement ele21 = driver.findElement(By.xpath("//a[@href='/node/1/edit']"));
 	JavascriptExecutor executor2111 = (JavascriptExecutor)driver;

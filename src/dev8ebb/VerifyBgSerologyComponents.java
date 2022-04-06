@@ -256,7 +256,7 @@ a2.moveToElement(a1).click().perform();
 	tt.executeScript("arguments[0].click();", qq);                               //verify Blood group
 	
 	
-	
+
 	
 
 	try {
@@ -277,7 +277,6 @@ a2.moveToElement(a1).click().perform();
 
 	driver.findElement(By.xpath("//div[@id='edit_field_tests_technician_chosen']")).click();
 	driver.findElement(By.xpath("//li[text()='PriyankaGK']")).click();
-
 
 	WebElement ele11111 = driver.findElement(By.id("edit-submit"));
 	JavascriptExecutor executor11111 = (JavascriptExecutor)driver;

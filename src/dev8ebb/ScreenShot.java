@@ -26,7 +26,6 @@ public class ScreenShot {
 		 driver.get("https://dev.ebloodbanking.com/");
 		 driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 			driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
 			driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 			driver.findElement(By.id("edit-submit")).click();
@@ -38,7 +37,7 @@ public class ScreenShot {
 		 FileUtils.copyFile(scrFile, desFile);
 		 driver.close();
 		 
-	
+
 	 }
 
 }

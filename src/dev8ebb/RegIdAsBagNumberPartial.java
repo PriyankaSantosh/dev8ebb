@@ -42,13 +42,12 @@ public class RegIdAsBagNumberPartial {
 
 	WebElement checking = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-allow-partial-donor-entry']"));
 	if (checking.isSelected()) {
-		
+	
 		
 			
 		WebElement ele21 = driver.findElement(By.id("edit-submit"));
 		JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
 		executor2111.executeScript("arguments[0].click();", ele21);
-
 
  } else {
 	 WebElement check1 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-allow-partial-donor-entry']"));

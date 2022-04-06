@@ -295,6 +295,5 @@ driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
 	driver.findElement(By.xpath("//*[@id=\"block-createcontentfooterlinksblock\"]/div[2]/a")).click();
 
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();   //create components 
-
 	
 }}

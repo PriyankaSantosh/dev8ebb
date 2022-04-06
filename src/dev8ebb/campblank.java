@@ -23,7 +23,6 @@ static
 	System.setProperty(key, value);
 	}
 
-
 public static void main(String[] args) throws InterruptedException
 {
 WebDriver driver=new ChromeDriver();
@@ -43,9 +42,9 @@ DateFormat dateFormat1 = new SimpleDateFormat("dd-MM-yyy");
 
 //get current date time with Date()
 
-Date date1 = new Date();
+Date date17 = new Date();
 
-String  dd1=dateFormat1.format(date1);
+String  dd1=dateFormat1.format(date17);
 System.out.println(dd1);
 
 DateFormat dateFormat2 = new SimpleDateFormat("HH-mm");

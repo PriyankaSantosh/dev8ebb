@@ -42,12 +42,11 @@ public class RegIdasBagnumberFull{
 	WebElement checking2 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-blood-group-non-mandatory-in-donation-record']"));
 	if (checking2.isSelected()) {
 		
-		
+	
 		
 		WebElement ele21 = driver.findElement(By.id("edit-submit"));
 		JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
 		executor2111.executeScript("arguments[0].click();", ele21);
-
 
  }
 	else {

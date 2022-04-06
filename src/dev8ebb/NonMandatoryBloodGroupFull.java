@@ -87,13 +87,11 @@ public class NonMandatoryBloodGroupFull {
 	
 	DateFormat dateFormat2 = new SimpleDateFormat("HH-mm");
 
-	//get current date time with Date()
 
 	Date date2 = new Date();
 
 	String  dd2=dateFormat2.format(date2);
 	System.out.println(dd2);
-
 
 	/*JavascriptExecutor jse = ((JavascriptExecutor) driver); 
 	jse.executeScript("document.getElementById('edit-field-donor-registration-id-0-value').value='test'");

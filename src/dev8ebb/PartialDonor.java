@@ -74,6 +74,5 @@ public class PartialDonor {
 				"Component to be prepared information is not entered");
 	
 	
-	
 }
 }

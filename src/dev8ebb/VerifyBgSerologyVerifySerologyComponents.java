@@ -22,7 +22,6 @@ public class VerifyBgSerologyVerifySerologyComponents {
 		System.setProperty(key, value);
 		}
 
-
 	public static void main(String[] args) throws InterruptedException
 	{
 	WebDriver driver=new ChromeDriver();

@@ -24,7 +24,7 @@ public void CheckEligibleage() throws InterruptedException
 {
 
 	
-		// TODO Auto-generated method stub
+	
 		//public static void main(String[] args) throws InterruptedException, AWTException {
 			//WebDriver driver=new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

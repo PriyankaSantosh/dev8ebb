@@ -44,11 +44,10 @@ public class blankfields {
 
 		//get current date time with Date()
 
-		Date date1 = new Date();
+		Date date11 = new Date();
 
-		String  dd1=dateFormat1.format(date1);
+		String  dd1=dateFormat1.format(date11);
 		System.out.println(dd1);
-
 
 		/*JavascriptExecutor jse = ((JavascriptExecutor) driver); 
 		jse.executeScript("document.getElementById('edit-field-donor-registration-id-0-value').value='test'");

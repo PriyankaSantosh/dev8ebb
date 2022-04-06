@@ -186,7 +186,7 @@ public class VerifyBgComponentsSerology {
 			 action2.moveToElement(element2).click().perform();
 				driver.findElement(By.id("edit-field-donor-name-0-value")).sendKeys(dd1 + dd2);
 				
-				
+			
 
 
 	WebDriverWait wait2=new WebDriverWait(driver,90);
@@ -203,7 +203,6 @@ WebElement a1 = driver.findElement(By.xpath("//*[@id=\"ui-id-6\"]/span/span"));
 Actions a2=new Actions(driver);
 a2.moveToElement(a1).click().perform();
 //driver.findElement(By.xpath("//*[@id=\\\"ui-id-6\\\"]/span/span")).click();
-
 
 
 	 WebElement aa = driver.findElement(By.xpath("//div[@id='edit_field_number_of_donations_chosen']"));

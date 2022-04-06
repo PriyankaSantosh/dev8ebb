@@ -22,7 +22,6 @@ public class VerifyBgComponentsSerologyVerifySerology {
 		System.setProperty(key, value);
 		}
 
-
 	public static void main(String[] args) throws InterruptedException
 	{
 	WebDriver driver=new ChromeDriver();
@@ -40,7 +39,7 @@ public class VerifyBgComponentsSerologyVerifySerology {
 	
 	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
-	
+
 	WebElement ele21 = driver.findElement(By.xpath("//a[@href='/node/1/edit']"));
 	JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
 	executor2111.executeScript("arguments[0].click();", ele21);

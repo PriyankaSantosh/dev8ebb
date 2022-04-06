@@ -121,7 +121,7 @@ public class SerologyVerifySeroloVerifyBgCompone {
 	 WebElement checking4 = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-mandatory-serology-verification']"));
 	if (checking4.isSelected()) {
 		
-		
+	
 		
 		WebElement ele219 = driver.findElement(By.id("edit-submit"));
 		JavascriptExecutor executor21119 = (JavascriptExecutor)driver;

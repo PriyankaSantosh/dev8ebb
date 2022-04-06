@@ -270,7 +270,7 @@ a2.moveToElement(a1).click().perform();
 	}
 	
 	
-	
+
 	driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
 
 
@@ -291,8 +291,7 @@ a2.moveToElement(a1).click().perform();
 	JavascriptExecutor ee = (JavascriptExecutor)driver;
 	ee.executeScript("arguments[0].click();", app);
 	
-	
-	
+		
 	
 	driver.findElement(By.xpath("/html/body/div[1]/div/div/section/div[2]/article/div[2]/div[1]/div[2]/a")).click();
 	
