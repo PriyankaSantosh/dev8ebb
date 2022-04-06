@@ -1,5 +1,6 @@
 package dev8ebb;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class serlogyasPositive{
 	static
@@ -22,10 +24,16 @@ public class serlogyasPositive{
 		System.setProperty(key, value);
 		}
 
-
-	public static void main(String[] args) throws InterruptedException
-	{
 	WebDriver driver=new ChromeDriver();
+	@Test
+	public void serlogyasPositive() throws InterruptedException, IOException 
+	{
+		
+		
+	
+//	public static void main(String[] args) throws InterruptedException
+	//{
+	//WebDriver driver=new ChromeDriver();
 	driver.get("https://dev8.ebloodbanking.com/");
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);

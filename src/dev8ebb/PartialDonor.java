@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class PartialDonor {
 	static
@@ -20,9 +21,16 @@ public class PartialDonor {
 		}
 
 
-	public static void main(String[] args) throws InterruptedException
-	{
+	
 	WebDriver driver=new ChromeDriver();
+	@Test
+	public void PartialDonor() throws InterruptedException 
+	{
+	
+	
+	//public static void main(String[] args) throws InterruptedException
+//	{
+	//WebDriver driver=new ChromeDriver();
 	driver.get("https://dev8.ebloodbanking.com/");
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);

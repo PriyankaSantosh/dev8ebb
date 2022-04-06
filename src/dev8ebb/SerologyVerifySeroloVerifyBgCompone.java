@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class SerologyVerifySeroloVerifyBgCompone {
 	static
@@ -22,10 +23,18 @@ public class SerologyVerifySeroloVerifyBgCompone {
 		System.setProperty(key, value);
 		}
 
-
-	public static void main(String[] args) throws InterruptedException
-	{
+	
 	WebDriver driver=new ChromeDriver();
+	@Test
+	public void SerologyVerifySeroloVerifyBgCompone() throws InterruptedException 
+	{
+	
+	
+	
+
+	//public static void main(String[] args) throws InterruptedException
+	//{
+	//WebDriver driver=new ChromeDriver();
 	driver.get("https://dev8.ebloodbanking.com/");
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);

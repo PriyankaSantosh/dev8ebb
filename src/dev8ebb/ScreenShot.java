@@ -10,6 +10,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class ScreenShot {
 	 static 
@@ -20,9 +21,15 @@ public class ScreenShot {
 	    System.setProperty(key, value);
 	}
 	 
-	 public static void main(String[] args) throws InterruptedException, IOException
-	 {
-		 WebDriver driver=new ChromeDriver();
+	 WebDriver driver=new ChromeDriver();
+		@Test
+		public void ScreenShot() throws InterruptedException, IOException 
+		{
+	 
+	 
+	// public static void main(String[] args) throws InterruptedException, IOException
+	 //{
+		// WebDriver driver=new ChromeDriver();
 		 driver.get("https://dev.ebloodbanking.com/");
 		 driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

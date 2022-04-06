@@ -13,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class crossmatch {
 	static
@@ -21,8 +22,16 @@ public class crossmatch {
 		String value="./driver/chromedriver.exe";
 		System.setProperty(key, value);
 		}
-	public static void main(String[] args) throws InterruptedException
+	
+	WebDriver driver=new ChromeDriver();
+	@Test
+	public void crossmatch() throws InterruptedException 
 	{
+		
+	
+	
+	//public static void main(String[] args) throws InterruptedException
+	//{
 	WebDriver driver=new ChromeDriver();
 	driver.get("https://dev8.ebloodbanking.com/");
 	driver.manage().window().maximize();

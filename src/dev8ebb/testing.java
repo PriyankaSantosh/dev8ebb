@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class testing {
 	static
@@ -14,9 +15,17 @@ public class testing {
 		System.setProperty(key, value);
 		}
 
-	public static void main(String[] args) throws InterruptedException
-	{
+	
 	WebDriver driver=new ChromeDriver();
+	@Test
+	public void testing() throws InterruptedException 
+	{
+	
+	
+	
+	//public static void main(String[] args) throws InterruptedException
+	//{
+	//WebDriver driver=new ChromeDriver();
 	driver.get("https://dev8.ebloodbanking.com/");
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);

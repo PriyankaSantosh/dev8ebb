@@ -7,8 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.Test;
 
-public class CrossmatcWithExpiredComponent {
+public class CrossmatchWithExpiredComponent {
 	static
 	{
 	 	String key="webdriver.chrome.driver";
@@ -16,10 +17,13 @@ public class CrossmatcWithExpiredComponent {
 		System.setProperty(key, value);
 		}
 
-
-	public static void main(String[] args) throws InterruptedException
-	{
 	WebDriver driver=new ChromeDriver();
+	@Test
+	public void CrossmatchWithExpiredComponent() throws InterruptedException 
+	{
+	//public static void main(String[] args) throws InterruptedException
+	//{
+	//WebDriver driver=new ChromeDriver();
 	driver.get("https://dev8.ebloodbanking.com/");
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);

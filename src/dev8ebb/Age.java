@@ -25,10 +25,17 @@ public class Age {
 			String value="./driver/chromedriver.exe";
 			System.setProperty(key, value);
 			}
+		
+			WebDriver driver=new ChromeDriver();
+			@Test
+			public void Age() throws InterruptedException 
+			{
+				
+			
 
-		public static void main(String[] args) throws InterruptedException
-		{
-		WebDriver driver=new ChromeDriver();
+		//public static void main(String[] args) throws InterruptedException
+		//{
+		//WebDriver driver=new ChromeDriver();
 		driver.get("https://dev8.ebloodbanking.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
