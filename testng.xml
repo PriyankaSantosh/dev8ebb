@@ -25,7 +25,10 @@
 <class name="dev8ebb.NonMandatoryBloodGroupFull" />
 <class name="dev8ebb.NonmandatoryBloodgroupPartial" />
 <class name="dev8ebb.PartialDonor" />
-
+<class name="dev8ebb.Patient" />
+<class name="dev8ebb.VerifySerologyEnabled" />
+<class name="dev8ebb.PatientWithBlankFields" />
+<class name="dev8ebb.VerifySerologyDisabled" />
 
 
 

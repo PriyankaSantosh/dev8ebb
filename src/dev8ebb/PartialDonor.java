@@ -38,19 +38,41 @@ public class PartialDonor {
 	driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
 	driver.findElement(By.xpath("//a[@href='/user/9']")).click();
+
 	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
+	
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
+	
+	WebElement ele21 = driver.findElement(By.xpath("//a[@href='/node/1/edit']"));
+	JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
+	executor2111.executeScript("arguments[0].click();", ele21);
+	
+	
+	
+	/*WebDriverWait wait=new WebDriverWait(driver,150);
+	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/node/1/edit']")));
+	
 	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
+*/
+	
+	WebDriverWait wait9=new WebDriverWait(driver,90);
+	wait9.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='#edit-group-miscellaneous']")));
 	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
 	
 
+	
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
+	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
 	WebElement checking = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-allow-partial-donor-entry']"));
 	if (checking.isSelected()) {
 		
 		
 			
-		WebElement ele21 = driver.findElement(By.id("edit-submit"));
-		JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
-		executor2111.executeScript("arguments[0].click();", ele21);
+		WebElement ele211 = driver.findElement(By.id("edit-submit"));
+		JavascriptExecutor executor21112 = (JavascriptExecutor)driver;
+		executor21112.executeScript("arguments[0].click();", ele211);
 
 
  } else {
@@ -58,13 +80,13 @@ public class PartialDonor {
 	 JavascriptExecutor executor211 = (JavascriptExecutor)driver;
 		executor211.executeScript("arguments[0].click();", check1);
 	 
-          WebElement ele21 = driver.findElement(By.id("edit-submit"));
-			JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
-			executor2111.executeScript("arguments[0].click();", ele21);
+          WebElement ele219 = driver.findElement(By.id("edit-submit"));
+			JavascriptExecutor executor21119 = (JavascriptExecutor)driver;
+			executor21119.executeScript("arguments[0].click();", ele219);
           
  }
-	WebDriverWait wait=new WebDriverWait(driver,90);
-	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='expanded dropdown first']")));
+	WebDriverWait wait1=new WebDriverWait(driver,90);
+	wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='expanded dropdown first']")));
 	driver.findElement(By.xpath("//li[@class='expanded dropdown first']")).click();
 	
 	driver.findElement(By.xpath("(//a[@href='/node/add/donation_record'])[1]")).click();
