@@ -42,12 +42,13 @@ public class NonmandatoryBloodgroupPartial {
 	
 	
 	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-	
-	WebElement ele21 = driver.findElement(By.xpath("//a[@href='/user/9']"));
+	//driver.findElement(By.xpath("//a[@href='/user/9']"));
+	/*WebElement ele21 = driver.findElement(By.xpath("//a[@href='/user/9']"));
 	JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
-	executor2111.executeScript("arguments[0].click();", ele21);
+	executor2111.executeScript("arguments[0].click();", ele21);*/
 	
-
+	driver.findElement(By.xpath("//a[@href='/user/9']")).click();
+	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
 	
 	/*WebElement element = driver.findElement(By.xpath("//a[@href='/user/9']"));
 	Actions action = new Actions(driver);
@@ -56,7 +57,7 @@ public class NonmandatoryBloodgroupPartial {
 	
 	
 	
-		driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
+	//	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
 		
 		
 		
