@@ -2,5 +2,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test name="Test">
+  <classes>
+<class name="dev8ebb.Age" />
+<class name="dev8ebb.blankfields" />
+<class name="dev8ebb.BP" />
+<class name="dev8ebb.campblank" />
+<class name="dev8ebb.checkeligibility" />
+<class name="dev8ebb.ClosePatientRequestWithoutCrossmatch" />
+
+
+</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

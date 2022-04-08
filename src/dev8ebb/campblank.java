@@ -35,7 +35,7 @@ public void campblank() throws InterruptedException
 //WebDriver driver=new ChromeDriver();
 driver.get("https://dev8.ebloodbanking.com/");
 driver.manage().window().maximize();
-driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
 driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
