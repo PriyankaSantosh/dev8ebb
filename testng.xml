@@ -9,6 +9,24 @@
 <class name="dev8ebb.campblank" />
 <class name="dev8ebb.checkeligibility" />
 <class name="dev8ebb.ClosePatientRequestWithoutCrossmatch" />
+<class name="dev8ebb.ComponentsSerologyVerifyBg" />
+<class name="dev8ebb.ComponentsSerologyVerifySerVerifyBg" />
+<class name="dev8ebb.CreatePatientBillWithoutAddingItem" />
+<class name="dev8ebb.crossmatch" />
+<class name="dev8ebb.CrossmatchWithComponentVolumnNotPresent" />
+<class name="dev8ebb.crossmatchwithdifferentbloodGroup" />
+<class name="dev8ebb.CrossmatchWithExpiredComponent" />
+<class name="dev8ebb.CrossmatchWithMismatchBloodGroup" />
+<class name="dev8ebb.DiscardDonor" />
+<class name="dev8ebb.FutherDateOfCollection" />
+<class name="dev8ebb.Hb" />
+<class name="dev8ebb.issueReserve" />
+<class name="dev8ebb.NocrossmatchForCryoPlt" />
+<class name="dev8ebb.NonMandatoryBloodGroupFull" />
+<class name="dev8ebb.NonmandatoryBloodgroupPartial" />
+<class name="dev8ebb.PartialDonor" />
+
+
 
 
 </classes>
