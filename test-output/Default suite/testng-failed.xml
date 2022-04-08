@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="dev8ebb.Addition">
+      <class name="dev8ebb.checkeligibility">
         <methods>
-          <include name="main"/>
+          <include name="checkeligibility"/>
         </methods>
-      </class> <!-- dev8ebb.Addition -->
+      </class> <!-- dev8ebb.checkeligibility -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

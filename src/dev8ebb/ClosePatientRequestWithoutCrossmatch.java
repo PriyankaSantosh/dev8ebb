@@ -33,13 +33,13 @@ public class ClosePatientRequestWithoutCrossmatch {
 	//WebDriver driver=new ChromeDriver();
 	driver.get("https://dev8.ebloodbanking.com/");
 	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 	driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
 	driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
 	
 	
-	WebDriverWait wait=new WebDriverWait(driver,90);
+	WebDriverWait wait=new WebDriverWait(driver,100);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//li[@class='expanded dropdown'])[3]")));
 	driver.findElement(By.xpath("(//li[@class='expanded dropdown'])[3]")).click();
 	driver.findElement(By.xpath("//a[@href='/create-patient-blood-requirement']")).click();
@@ -78,9 +78,9 @@ public class ClosePatientRequestWithoutCrossmatch {
 	
 	driver.findElement(By.xpath("//button[@value='Save']")).click();
 	driver.findElement(By.xpath("//a[@title='Click to Close Patient Request']")).click();
-
+driver.findElement(By.xpath("//button[@value='Close Patient Request']")).click();
 	//driver.findElement(By.xpath("//a[@title='Click to Close Patient Request']")).click();
-	driver.findElement(By.xpath("(//button[@data-drupal-selector='edit-submit'])[2]")).click();
+	//driver.findElement(By.xpath("(//button[@data-drupal-selector='edit-submit'])[2]")).click();
 	System.out.println("Setting the request status as dropped as not components were issued to the patient");
 
 }
