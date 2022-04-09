@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="108159" started-at="2022-04-08T11:44:59Z" finished-at="2022-04-08T11:46:47Z">
+  <suite name="Default suite" duration-ms="141972" started-at="2022-04-08T12:56:19Z" finished-at="2022-04-08T12:58:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="108159" started-at="2022-04-08T11:44:59Z" finished-at="2022-04-08T11:46:47Z">
-      <class name="dev8ebb.NonmandatoryBloodgroupPartial">
-        <test-method status="PASS" signature="NonmandatoryBloodgroupPartial()[pri:0, instance:dev8ebb.NonmandatoryBloodgroupPartial@1b2abca6]" name="NonmandatoryBloodgroupPartial" duration-ms="108138" started-at="2022-04-08T17:14:59Z" finished-at="2022-04-08T17:16:47Z">
+    <test name="Default test" duration-ms="141972" started-at="2022-04-08T12:56:19Z" finished-at="2022-04-08T12:58:41Z">
+      <class name="dev8ebb.VerifySerologyDisabled">
+        <test-method status="PASS" signature="VerifySerologyDisabled()[pri:0, instance:dev8ebb.VerifySerologyDisabled@1b2abca6]" name="VerifySerologyDisabled" duration-ms="141941" started-at="2022-04-08T18:26:19Z" finished-at="2022-04-08T18:28:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NonmandatoryBloodgroupPartial -->
-      </class> <!-- dev8ebb.NonmandatoryBloodgroupPartial -->
+        </test-method> <!-- VerifySerologyDisabled -->
+      </class> <!-- dev8ebb.VerifySerologyDisabled -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

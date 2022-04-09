@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="dev8ebb.NonmandatoryBloodgroupPartial">
+      <class name="dev8ebb.RegIdasBagnumberFull">
         <methods>
-          <include name="NonmandatoryBloodgroupPartial"/>
+          <include name="RegIdasBagnumberFull"/>
         </methods>
-      </class> <!-- dev8ebb.NonmandatoryBloodgroupPartial -->
+      </class> <!-- dev8ebb.RegIdasBagnumberFull -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
