@@ -43,7 +43,7 @@
 <class name="dev8ebb.VerifyBgComponentsSerology" /> 
 <class name="dev8ebb.VerifyBgComponentsSerologyVerifySerology" /> 
 <class name="dev8ebb.VerifyBgSerologyComponents" /> 
-<class name="dev8ebb.VerifyBgSerologyVerifySerologyComponents" /> //
+<class name="dev8ebb.VerifyBgSerologyVerifySerologyComponents" /> 
 <class name="dev8ebb.VerifyBloodGroup" /> 
 <class name="dev8ebb.verifyBloodGroupIsDisabled" /> 
 
