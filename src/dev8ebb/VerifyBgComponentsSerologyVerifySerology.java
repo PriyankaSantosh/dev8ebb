@@ -23,7 +23,7 @@ public class VerifyBgComponentsSerologyVerifySerology {
 		System.setProperty(key, value);
 		}
 	
-	
+
 
 	WebDriver driver=new ChromeDriver();
 	@Test

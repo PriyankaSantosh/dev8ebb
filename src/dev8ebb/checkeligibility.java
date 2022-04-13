@@ -23,7 +23,8 @@ public class checkeligibility {
 	
 	
 	WebDriver driver=new ChromeDriver();
-	@Test 
+	 @Test (priority = 5)
+ 
 
 	public void checkeligibility() throws InterruptedException 
 	{

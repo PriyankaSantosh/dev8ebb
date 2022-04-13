@@ -23,7 +23,6 @@ public class crossmatchwithdifferentbloodGroup {
 		System.setProperty(key, value);
 		}
 
-
 	WebDriver driver=new ChromeDriver();
 	@Test
 	public void crossmatchwithdifferentbloodGroup() throws InterruptedException 

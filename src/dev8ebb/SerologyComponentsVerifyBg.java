@@ -48,7 +48,7 @@ public class SerologyComponentsVerifyBg {
 	
 	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
-	
+
 	WebElement ele21 = driver.findElement(By.xpath("//a[@href='/node/1/edit']"));
 	JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
 	executor2111.executeScript("arguments[0].click();", ele21);

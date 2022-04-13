@@ -8,7 +8,6 @@
 <class name="dev8ebb.BP" />
 <class name="dev8ebb.campblank" />
 <class name="dev8ebb.checkeligibility" />
-<!-- 
 <class name="dev8ebb.ClosePatientRequestWithoutCrossmatch" />
 <class name="dev8ebb.ComponentsSerologyVerifyBg" />
 <class name="dev8ebb.ComponentsSerologyVerifySerVerifyBg" />
@@ -30,7 +29,25 @@
 <class name="dev8ebb.VerifySerologyEnabled" />
 <class name="dev8ebb.PatientWithBlankFields" />
 <class name="dev8ebb.VerifySerologyDisabled" /> 
- -->
+<class name="dev8ebb.PatientWithBlankFields" /> 
+<class name="dev8ebb.RegIdasBagnumberFull" /> 
+<class name="dev8ebb.RegIdAsBagNumberPartial" /> 
+<class name="dev8ebb.serlogyasPositive" /> 
+<class name="dev8ebb.SerologyComponentsVerifyBg" /> 
+<class name="dev8ebb.SerologyVerifyBgComponents" /> 
+<class name="dev8ebb.SerologyVerifySeroCompoVerifyBg" /> 
+<class name="dev8ebb.SerologyVerifySerologyComponents" /> 
+<class name="dev8ebb.SerologyVerifySeroloVerifyBgCompone" /> 
+<class name="dev8ebb.SerologyWithoutTechnician" /> 
+<class name="dev8ebb.SerologyWithoutTechnician" /> 
+<class name="dev8ebb.VerifyBgComponentsSerology" /> 
+<class name="dev8ebb.VerifyBgComponentsSerologyVerifySerology" /> 
+<class name="dev8ebb.VerifyBgSerologyComponents" /> 
+<class name="dev8ebb.VerifyBgSerologyVerifySerologyComponents" /> //
+<class name="dev8ebb.VerifyBloodGroup" /> 
+<class name="dev8ebb.verifyBloodGroupIsDisabled" /> 
+
+
 </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

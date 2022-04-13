@@ -23,7 +23,6 @@ public class SerologyWithoutTechnician {
 		System.setProperty(key, value);
 		}
 
-
 	WebDriver driver=new ChromeDriver();
 	@Test
 	public void SerologyWithoutTechnician() throws InterruptedException 

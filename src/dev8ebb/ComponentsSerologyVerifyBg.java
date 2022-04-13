@@ -193,7 +193,6 @@ public class ComponentsSerologyVerifyBg {
 				driver.findElement(By.id("edit-field-donor-name-0-value")).sendKeys(dd1 + dd2);
 				
 			
-
 	WebDriverWait wait2=new WebDriverWait(driver,90);
 	wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='edit_field_blood_group_chosen']")));
 	driver.findElement(By.xpath("//div[@id='edit_field_blood_group_chosen']")).click();

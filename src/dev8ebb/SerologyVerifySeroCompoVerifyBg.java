@@ -69,7 +69,7 @@ public class SerologyVerifySeroCompoVerifyBg {
 	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
 	
 
-	
+
 	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
 	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
