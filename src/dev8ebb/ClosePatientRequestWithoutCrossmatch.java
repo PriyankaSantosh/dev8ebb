@@ -25,7 +25,7 @@ public class ClosePatientRequestWithoutCrossmatch {
 
 	
 	WebDriver driver=new ChromeDriver();
-	@Test
+ 	@Test
 	public void ClosePatientRequestWithoutCrossmatch() throws InterruptedException 
 	{
 	//public static void main(String[] args) throws InterruptedException
@@ -77,12 +77,13 @@ public class ClosePatientRequestWithoutCrossmatch {
 	driver.findElement(By.xpath("//ul[@id='ui-id-1']")).click();
 	
 	driver.findElement(By.xpath("//button[@value='Save']")).click();
-	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-	driver.findElement(By.xpath("//a[@title='Click to Close Patient Request']")).click();
+	driver.manage().timeouts().implicitlyWait(150, TimeUnit.SECONDS);
+
+	driver.findElement(By.xpath("//a[text()='Close Patient Request']")).click();
 
 	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
-driver.findElement(By.xpath("//button[@value='Close Patient Request']")).click();
+driver.findElement(By.xpath("(//button[@data-drupal-selector='edit-submit'])[2]")).click();
 
 	//driver.findElement(By.xpath("//a[@title='Click to Close Patient Request']")).click();
 	//driver.findElement(By.xpath("(//button[@data-drupal-selector='edit-submit'])[2]")).click();

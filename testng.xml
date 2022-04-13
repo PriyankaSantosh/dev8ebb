@@ -8,6 +8,7 @@
 <class name="dev8ebb.BP" />
 <class name="dev8ebb.campblank" />
 <class name="dev8ebb.checkeligibility" />
+<!-- 
 <class name="dev8ebb.ClosePatientRequestWithoutCrossmatch" />
 <class name="dev8ebb.ComponentsSerologyVerifyBg" />
 <class name="dev8ebb.ComponentsSerologyVerifySerVerifyBg" />
@@ -28,10 +29,8 @@
 <class name="dev8ebb.Patient" />
 <class name="dev8ebb.VerifySerologyEnabled" />
 <class name="dev8ebb.PatientWithBlankFields" />
-<class name="dev8ebb.VerifySerologyDisabled" />
-
-
-
+<class name="dev8ebb.VerifySerologyDisabled" /> 
+ -->
 </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -3,16 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="dev8ebb.campblank">
+      <class name="dev8ebb.checkeligibility">
         <methods>
-          <include name="campblank"/>
+          <include name="checkeligibility"/>
         </methods>
-      </class> <!-- dev8ebb.campblank -->
-      <class name="dev8ebb.ClosePatientRequestWithoutCrossmatch">
-        <methods>
-          <include name="ClosePatientRequestWithoutCrossmatch"/>
-        </methods>
-      </class> <!-- dev8ebb.ClosePatientRequestWithoutCrossmatch -->
+      </class> <!-- dev8ebb.checkeligibility -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -26,7 +26,7 @@ public class blankfields {
 
 		
 		WebDriver driver=new ChromeDriver();
-		@Test
+		 @Test (priority = 2)
 		public void blankfields() throws InterruptedException 
 		{
 			

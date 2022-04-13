@@ -23,7 +23,8 @@ public class checkeligibility {
 	
 	
 	WebDriver driver=new ChromeDriver();
-	@Test
+	@Test 
+
 	public void checkeligibility() throws InterruptedException 
 	{
 
@@ -36,8 +37,8 @@ public class checkeligibility {
 			driver.manage().window().maximize();
 			driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
 			driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
-			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-			driver.findElement(By.id("edit-submit")).click();
+			
+			driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 			//driver.findElement(By.xpath("(//a[@class='specialmenuitem'])[1]")).click();
 			driver.findElement(By.xpath("//li[@class='expanded dropdown first']")).click();

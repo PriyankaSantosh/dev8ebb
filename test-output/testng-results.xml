@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="141972" started-at="2022-04-08T12:56:19Z" finished-at="2022-04-08T12:58:41Z">
+  <suite name="Default suite" duration-ms="50322" started-at="2022-04-12T12:45:07Z" finished-at="2022-04-12T12:45:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="141972" started-at="2022-04-08T12:56:19Z" finished-at="2022-04-08T12:58:41Z">
-      <class name="dev8ebb.VerifySerologyDisabled">
-        <test-method status="PASS" signature="VerifySerologyDisabled()[pri:0, instance:dev8ebb.VerifySerologyDisabled@1b2abca6]" name="VerifySerologyDisabled" duration-ms="141941" started-at="2022-04-08T18:26:19Z" finished-at="2022-04-08T18:28:41Z">
+    <test name="Default test" duration-ms="50322" started-at="2022-04-12T12:45:07Z" finished-at="2022-04-12T12:45:58Z">
+      <class name="dev8ebb.ClosePatientRequestWithoutCrossmatch">
+        <test-method status="PASS" signature="ClosePatientRequestWithoutCrossmatch()[pri:0, instance:dev8ebb.ClosePatientRequestWithoutCrossmatch@1b2abca6]" name="ClosePatientRequestWithoutCrossmatch" duration-ms="50266" started-at="2022-04-12T18:15:07Z" finished-at="2022-04-12T18:15:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifySerologyDisabled -->
-      </class> <!-- dev8ebb.VerifySerologyDisabled -->
+        </test-method> <!-- ClosePatientRequestWithoutCrossmatch -->
+      </class> <!-- dev8ebb.ClosePatientRequestWithoutCrossmatch -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

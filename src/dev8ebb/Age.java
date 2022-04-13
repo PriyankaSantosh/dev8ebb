@@ -27,7 +27,7 @@ public class Age {
 			}
 		
 			WebDriver driver=new ChromeDriver();
-			@Test
+		 	@Test (priority = 1)
 			public void Age() throws InterruptedException 
 			{
 				
