@@ -22,7 +22,6 @@ public class SerologyVerifySeroloVerifyBgCompone {
 		String value="./driver/chromedriver.exe";
 		System.setProperty(key, value);
 		}
-
 	
 	WebDriver driver=new ChromeDriver();
 	@Test
@@ -55,7 +54,8 @@ public class SerologyVerifySeroloVerifyBgCompone {
 	executor2111.executeScript("arguments[0].click();", ele21);
 	
 	
-	
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
 	/*WebDriverWait wait=new WebDriverWait(driver,150);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/node/1/edit']")));
 	

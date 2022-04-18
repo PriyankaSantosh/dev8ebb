@@ -29,7 +29,7 @@ public class serlogyasPositive{
 	public void serlogyasPositive() throws InterruptedException, IOException 
 	{
 		
-		
+	
 	
 //	public static void main(String[] args) throws InterruptedException
 	//{

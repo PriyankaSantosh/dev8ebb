@@ -28,7 +28,7 @@ public class VerifyBloodGroup {
 	public void VerifyBloodGroup() throws InterruptedException 
 	{
 	
-	
+
 	
 	
 	//public static void main(String[] args) throws InterruptedException

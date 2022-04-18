@@ -16,7 +16,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 public class VerifyBgSerologyComponents {
-
 	static
 	{
 	 	String key="webdriver.chrome.driver";

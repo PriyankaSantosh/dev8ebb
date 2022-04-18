@@ -24,7 +24,8 @@ public class BP {
 		}
 	
 	WebDriver driver=new ChromeDriver();
-	@Test
+	 @Test (priority = 3)
+
 	public void BP() throws InterruptedException 
 	{
 	

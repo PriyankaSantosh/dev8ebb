@@ -46,7 +46,7 @@ public class VerifyBgSerologyVerifySerologyComponents {
 	
 	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
 	
-	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 
 	
 	WebElement ele21 = driver.findElement(By.xpath("//a[@href='/node/1/edit']"));
@@ -54,7 +54,8 @@ public class VerifyBgSerologyVerifySerologyComponents {
 	executor2111.executeScript("arguments[0].click();", ele21);
 	
 	
-	
+	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
+
 	/*WebDriverWait wait=new WebDriverWait(driver,150);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/node/1/edit']")));
 	
@@ -156,7 +157,6 @@ public class VerifyBgSerologyVerifySerologyComponents {
 	driver.findElement(By.xpath("(//a[@href='/node/add/donation_record'])[1]")).click();
 
 	DateFormat dateFormat1 = new SimpleDateFormat("dd-MM-yyy");
-
 	//get current date time with Date()
 
 	Date date1 = new Date();

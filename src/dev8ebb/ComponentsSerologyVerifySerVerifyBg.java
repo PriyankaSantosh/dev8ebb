@@ -23,6 +23,7 @@ public class ComponentsSerologyVerifySerVerifyBg {
 		System.setProperty(key, value);
 		}
 	
+	
 	WebDriver driver=new ChromeDriver();
 	@Test
 	public void ComponentsSerologyVerifySerVerifyBg() throws InterruptedException 

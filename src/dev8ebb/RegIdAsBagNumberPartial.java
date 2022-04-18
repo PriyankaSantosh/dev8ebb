@@ -31,7 +31,6 @@ public class RegIdAsBagNumberPartial {
 	public void RegIdAsBagNumberPartial() throws InterruptedException 
 	{
 	
-
 	//public static void main(String[] args) throws InterruptedException
 	//{
 	//WebDriver driver=new ChromeDriver();
@@ -41,13 +40,33 @@ public class RegIdAsBagNumberPartial {
 	driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
 	driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
-	driver.findElement(By.xpath("//a[@href='/user/9']")).click();
-	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
 	
+	
+	
+
+	driver.findElement(By.xpath("//a[@href='/user/9']")).click();
+
+	driver.findElement(By.xpath("(//a[@href='/node/1'])[1]")).click();
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	
+	WebElement ele218 = driver.findElement(By.xpath("//a[@href='/node/1/edit']"));
+	JavascriptExecutor executor21118 = (JavascriptExecutor)driver;
+	executor21118.executeScript("arguments[0].click();", ele218);
+
 	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
-	driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+	
+	
+	
+
+	WebDriverWait wait9=new WebDriverWait(driver,90);
+	wait9.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='#edit-group-miscellaneous']")));
 	driver.findElement(By.xpath("//a[@href='#edit-group-miscellaneous']")).click();
 	
+
+	
+	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	
+
 
 	WebElement checking = driver.findElement(By.xpath("//input[@id='edit-field-centre-custom-settings-allow-partial-donor-entry']"));
 	if (checking.isSelected()) {

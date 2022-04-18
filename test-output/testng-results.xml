@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="141972" started-at="2022-04-08T12:56:19Z" finished-at="2022-04-08T12:58:41Z">
+  <suite name="Default suite" duration-ms="131638" started-at="2022-04-13T11:03:14Z" finished-at="2022-04-13T11:05:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="141972" started-at="2022-04-08T12:56:19Z" finished-at="2022-04-08T12:58:41Z">
-      <class name="dev8ebb.VerifySerologyDisabled">
-        <test-method status="PASS" signature="VerifySerologyDisabled()[pri:0, instance:dev8ebb.VerifySerologyDisabled@1b2abca6]" name="VerifySerologyDisabled" duration-ms="141941" started-at="2022-04-08T18:26:19Z" finished-at="2022-04-08T18:28:41Z">
+    <test name="Default test" duration-ms="131638" started-at="2022-04-13T11:03:14Z" finished-at="2022-04-13T11:05:26Z">
+      <class name="dev8ebb.VerifyBgSerologyVerifySerologyComponents">
+        <test-method status="PASS" signature="VerifyBgSerologyVerifySerologyComponents()[pri:0, instance:dev8ebb.VerifyBgSerologyVerifySerologyComponents@1b2abca6]" name="VerifyBgSerologyVerifySerologyComponents" duration-ms="131604" started-at="2022-04-13T16:33:14Z" finished-at="2022-04-13T16:35:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifySerologyDisabled -->
-      </class> <!-- dev8ebb.VerifySerologyDisabled -->
+        </test-method> <!-- VerifyBgSerologyVerifySerologyComponents -->
+      </class> <!-- dev8ebb.VerifyBgSerologyVerifySerologyComponents -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

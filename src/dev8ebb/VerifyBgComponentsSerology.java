@@ -22,7 +22,6 @@ public class VerifyBgComponentsSerology {
 		String value="./driver/chromedriver.exe";
 		System.setProperty(key, value);
 		}
-
 	WebDriver driver=new ChromeDriver();
 	@Test
 	public void VerifyBgComponentsSerology() throws InterruptedException 
@@ -50,7 +49,8 @@ public class VerifyBgComponentsSerology {
 	JavascriptExecutor executor2111 = (JavascriptExecutor)driver;
 	executor2111.executeScript("arguments[0].click();", ele21);
 	
-	
+	driver.findElement(By.xpath("//a[@href='/node/1/edit']")).click();
+
 	
 	/*WebDriverWait wait=new WebDriverWait(driver,150);
 	wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/node/1/edit']")));

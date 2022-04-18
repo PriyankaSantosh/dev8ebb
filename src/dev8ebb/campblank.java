@@ -25,7 +25,8 @@ static
 	}
 
 WebDriver driver=new ChromeDriver();
-@Test
+ @Test (priority = 4)
+
 public void campblank() throws InterruptedException 
 {
 

@@ -15,7 +15,7 @@ public class testing {
 		System.setProperty(key, value);
 		}
 
-	
+
 	WebDriver driver=new ChromeDriver();
 	@Test
 	public void testing() throws InterruptedException 
