@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="dev8ebb.VerifyBloodGroup">
+      <class name="dev8ebb.BP">
         <methods>
-          <include name="VerifyBloodGroup"/>
+          <include name="BP"/>
         </methods>
-      </class> <!-- dev8ebb.VerifyBloodGroup -->
+      </class> <!-- dev8ebb.BP -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

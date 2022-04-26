@@ -1,10 +1,18 @@
 package dev8ebb;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -15,29 +23,58 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class BP {
+public class BP implements IAutoConst {
 	static
 	{
-	 	String key="webdriver.chrome.driver";
+	 	/*String key="webdriver.chrome.driver";
 		String value="./driver/chromedriver.exe";
-		System.setProperty(key, value);
+		System.setProperty(key, value);*/
+		System.setProperty(CHROME_KEY,CHROME_VALUE);
+		System.setProperty(GECKO_KEY,GECKO_VALUE);
+		
+		
+		
 		}
 	
 	WebDriver driver=new ChromeDriver();
 	 @Test (priority = 3)
 
-	public void BP() throws InterruptedException 
+	public void BP() throws InterruptedException, FileNotFoundException, IOException, EncryptedDocumentException, InvalidFormatException 
 	{
 	
 
 	//public static void main(String[] args) throws InterruptedException
 	//{
 	//WebDriver driver=new ChromeDriver();
-	driver.get("https://dev8.ebloodbanking.com/");
-	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-	driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
-	driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
+		 Properties p=new Properties();
+			p.load(new FileInputStream("./configs/configuration.properties"));
+			//String v=p.getProperty("url");
+
+			
+			driver.get(p.getProperty("url"));
+			
+			
+			//driver.get("http://dev.bmtplus.com/");
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+
+		
+			Workbook w= WorkbookFactory.create(new FileInputStream("./configs/data.xlsx"));
+			String username=w.getSheet("DemoA").getRow(0).getCell(0).getStringCellValue();
+			
+			Workbook w1= WorkbookFactory.create(new FileInputStream("./configs/data.xlsx"));
+			String password=w.getSheet("DemoA").getRow(0).getCell(1).getStringCellValue();
+		 
+		 
+		 
+		 
+		 
+		 
+	//driver.get("https://dev8.ebloodbanking.com/");
+	//driver.manage().window().maximize();
+	//driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	driver.findElement(By.id("edit-name")).sendKeys(username);
+	driver.findElement(By.id("edit-pass")).sendKeys(password);
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
 
 	WebDriverWait wait=new WebDriverWait(driver,90);
@@ -130,7 +167,10 @@ a2.moveToElement(a1).click().perform();
 	driver.findElement(By.xpath("//option[text()='350 ml Double CPDA']")).click();
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
 	
-	WebDriverWait wa=new WebDriverWait(driver,150);
+	
+	
+	
+	/*WebDriverWait wa=new WebDriverWait(driver,150);
 	wa.until(ExpectedConditions.elementToBeClickable(By.xpath("(//li/a[text()='Edit'])[1]")));	
 	driver.findElement(By.xpath("(//li/a[text()='Edit'])[1]")).click();
 	driver.findElement(By.xpath("//a[@href='#edit-group-medical-examination']")).click();
@@ -147,7 +187,7 @@ a2.moveToElement(a1).click().perform();
 	e1.clear();
 	driver.findElement(By.xpath("//input[@id='edit-field-bp-systolic-0-value']")).sendKeys("151");
 	driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
-	
+	*/
 	
 }
 }

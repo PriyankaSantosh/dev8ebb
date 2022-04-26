@@ -1,10 +1,18 @@
 package dev8ebb;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -16,9 +24,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class checkeligibility {
+public class checkeligibility implements IAutoConst {
 	static{
-		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+		/*System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");*/
+		
+		System.setProperty(CHROME_KEY,CHROME_VALUE);
+		System.setProperty(GECKO_KEY,GECKO_VALUE);
 		}
 	
 	
@@ -26,18 +37,38 @@ public class checkeligibility {
 	 @Test (priority = 5)
  
 
-	public void checkeligibility() throws InterruptedException 
+	public void checkeligibility() throws InterruptedException, FileNotFoundException, IOException, EncryptedDocumentException, InvalidFormatException 
 	{
 
 	
-	
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
 		//public static void main(String[] args) throws InterruptedException, AWTException {
 			//WebDriver driver=new ChromeDriver();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			driver.get("http://dev8.ebloodbanking.com/");
+		 Properties p=new Properties();
+			p.load(new FileInputStream("./configs/configuration.properties"));
+			//String v=p.getProperty("url");
+
+			
+			driver.get(p.getProperty("url"));
+			
+			
 			driver.manage().window().maximize();
-			driver.findElement(By.id("edit-name")).sendKeys("PriyankaGK");
-			driver.findElement(By.id("edit-pass")).sendKeys("PriyankaGK");
+			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+
+		
+			Workbook w= WorkbookFactory.create(new FileInputStream("./configs/data.xlsx"));
+			String username=w.getSheet("DemoA").getRow(0).getCell(0).getStringCellValue();
+			
+			Workbook w1= WorkbookFactory.create(new FileInputStream("./configs/data.xlsx"));
+			String password=w.getSheet("DemoA").getRow(0).getCell(1).getStringCellValue();
+			
+		 
+		 
+			//driver.get("http://dev8.ebloodbanking.com/");
+			//driver.manage().window().maximize();
+			driver.findElement(By.id("edit-name")).sendKeys(username);
+			driver.findElement(By.id("edit-pass")).sendKeys(password);
 			
 			driver.findElement(By.xpath("//button[@id='edit-submit']")).click();
 			driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
