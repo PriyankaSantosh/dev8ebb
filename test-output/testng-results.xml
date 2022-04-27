@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="131638" started-at="2022-04-13T11:03:14Z" finished-at="2022-04-13T11:05:26Z">
+  <suite name="Default suite" duration-ms="185132" started-at="2022-04-26T08:26:32Z" finished-at="2022-04-26T08:29:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="131638" started-at="2022-04-13T11:03:14Z" finished-at="2022-04-13T11:05:26Z">
-      <class name="dev8ebb.VerifyBgSerologyVerifySerologyComponents">
-        <test-method status="PASS" signature="VerifyBgSerologyVerifySerologyComponents()[pri:0, instance:dev8ebb.VerifyBgSerologyVerifySerologyComponents@1b2abca6]" name="VerifyBgSerologyVerifySerologyComponents" duration-ms="131604" started-at="2022-04-13T16:33:14Z" finished-at="2022-04-13T16:35:26Z">
+    <test name="Default test" duration-ms="185132" started-at="2022-04-26T08:26:32Z" finished-at="2022-04-26T08:29:37Z">
+      <class name="dev8ebb.crossmatch">
+        <test-method status="PASS" signature="crossmatch()[pri:0, instance:dev8ebb.crossmatch@4dbb42b7]" name="crossmatch" duration-ms="185112" started-at="2022-04-26T13:56:32Z" finished-at="2022-04-26T13:59:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyBgSerologyVerifySerologyComponents -->
-      </class> <!-- dev8ebb.VerifyBgSerologyVerifySerologyComponents -->
+        </test-method> <!-- crossmatch -->
+      </class> <!-- dev8ebb.crossmatch -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
